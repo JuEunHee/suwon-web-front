@@ -1,0 +1,30 @@
+# 최상위에 있는 파일로 명시
+root = true
+
+# 모든 파일에 적용
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# '.js'과 '.py'로 끝나는 파일에 적용
+[*.{js,py}]
+charset = utf-8
+
+# '.scss' 혹은 '.sass'로 끝나는 파일에 적용
+[*.{scss,sass}]
+indent_style = space
+indent_size = 2
+
+# 'Makefile'과 일치하는 파일 혹은 폴더에 적용
+[Makefile]
+indent_style = tab
+
+# lib 폴더 안에 있는 .js 파일에 적용
+[lib/**.js]
+indent_style = space
+indent_size = 2
+
+# package.json 혹은 .travis.yml 파일에 적용
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
