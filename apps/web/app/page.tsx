@@ -1,4 +1,4 @@
-import { Button } from "@suwon-web-front/ui/button";
+import { Button } from '@suwon-web-front/ui/button';
 
 export default function Home() {
   return (

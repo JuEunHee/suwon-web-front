@@ -3,22 +3,26 @@
 import { tv } from 'tailwind-variants';
 
 export const buttonVariants = tv({
-  base: [
-    'inline-flex items-center justify-center gap-2',
-    'whitespace-nowrap rounded-md text-sm font-semibold',
-    'transition-colors duration-200 ease-in-out',
-    'focus-visible:outline-none focus-visible:ring-2',
-    'focus-visible:ring-ring focus-visible:ring-inset',
-    'disabled:pointer-events-none disabled:opacity-50',
-    '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
-  ],
-  defaultVariants: {
-    intent: 'default',
-    size: 'md',
-    variant: 'outline',
-  },
   variants: {
     intent: {
+      primary: [
+        'data-[variant=outline]:border-primary data-[variant=outline]:text-primary',
+        'data-[variant=outline]:hover:bg-primary data-[variant=outline]:hover:text-primary-foreground',
+        'data-[variant=solid]:border-primary data-[variant=solid]:bg-primary data-[variant=solid]:text-primary-foreground',
+        'data-[variant=solid]:hover:bg-primary',
+        'data-[variant=ghost]:text-primary data-[variant=ghost]:hover:bg-primary/20',
+        'data-[variant=link]:text-primary',
+        'focus-visible:ring-primary',
+      ],
+      secondary: [
+        'data-[variant=outline]:border-secondary data-[variant=outline]:text-secondary',
+        'data-[variant=outline]:hover:bg-secondary data-[variant=outline]:hover:text-secondary-foreground',
+        'data-[variant=solid]:border-secondary data-[variant=solid]:bg-secondary data-[variant=solid]:text-secondary-foreground',
+        'data-[variant=solid]:hover:bg-secondary',
+        'data-[variant=ghost]:text-secondary data-[variant=ghost]:hover:bg-secondary/20',
+        'data-[variant=link]:text-secondary',
+        'focus-visible:ring-secondary',
+      ],
       cautionary: [
         'data-[variant=outline]:border-cautionary data-[variant=outline]:text-cautionary',
         'data-[variant=outline]:hover:bg-cautionary data-[variant=outline]:hover:text-cautionary-foreground',
@@ -73,24 +77,6 @@ export const buttonVariants = tv({
         'data-[variant=link]:text-positive',
         'focus-visible:ring-positive',
       ],
-      primary: [
-        'data-[variant=outline]:border-primary data-[variant=outline]:text-primary',
-        'data-[variant=outline]:hover:bg-primary data-[variant=outline]:hover:text-primary-foreground',
-        'data-[variant=solid]:border-primary data-[variant=solid]:bg-primary data-[variant=solid]:text-primary-foreground',
-        'data-[variant=solid]:hover:bg-primary',
-        'data-[variant=ghost]:text-primary data-[variant=ghost]:hover:bg-primary/20',
-        'data-[variant=link]:text-primary',
-        'focus-visible:ring-primary',
-      ],
-      secondary: [
-        'data-[variant=outline]:border-secondary data-[variant=outline]:text-secondary',
-        'data-[variant=outline]:hover:bg-secondary data-[variant=outline]:hover:text-secondary-foreground',
-        'data-[variant=solid]:border-secondary data-[variant=solid]:bg-secondary data-[variant=solid]:text-secondary-foreground',
-        'data-[variant=solid]:hover:bg-secondary',
-        'data-[variant=ghost]:text-secondary data-[variant=ghost]:hover:bg-secondary/20',
-        'data-[variant=link]:text-secondary',
-        'focus-visible:ring-secondary',
-      ],
       tertiary: [
         'data-[variant=outline]:border-tertiary data-[variant=outline]:text-tertiary',
         'data-[variant=outline]:hover:bg-tertiary data-[variant=outline]:hover:text-tertiary-foreground',
@@ -102,10 +88,10 @@ export const buttonVariants = tv({
       ],
     },
     size: {
-      icon: 'size-5 rounded-full',
       lg: 'h-12 px-5 py-2',
       md: 'h-10 px-4 py-2',
       sm: 'h-8 px-3 py-2',
+      icon: 'size-5 rounded-full',
     },
     variant: {
       ghost: 'bg-transparent',
@@ -113,5 +99,19 @@ export const buttonVariants = tv({
       outline: 'border bg-background',
       solid: 'border',
     },
+  },
+  base: [
+    'inline-flex items-center justify-center gap-2',
+    'whitespace-nowrap rounded-md text-sm font-semibold',
+    'transition-colors duration-200 ease-in-out',
+    'focus-visible:outline-none focus-visible:ring-2',
+    'focus-visible:ring-ring focus-visible:ring-inset',
+    'disabled:pointer-events-none disabled:opacity-50',
+    '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  ],
+  defaultVariants: {
+    intent: 'default',
+    size: 'md',
+    variant: 'outline',
   },
 });
