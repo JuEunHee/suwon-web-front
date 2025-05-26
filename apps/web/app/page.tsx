@@ -1,5 +1,5 @@
-import Notices from '@/features/notice/components/Notices';
 import { Button } from '@suwon-web-front/ui/button';
+import Notices from '@/features/notice/components/Notices';
 
 export default function Home() {
   return (

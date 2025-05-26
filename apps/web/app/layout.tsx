@@ -1,15 +1,11 @@
 import type { Metadata } from 'next';
-
-import './globals.css';
-
-import type React from 'react';
-
 import { Inter } from 'next/font/google';
+import type React from 'react';
 const inter = Inter({ subsets: ['latin'] });
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-
 import { Providers } from './providers';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: '수원시 통합관리 플랫폼',
