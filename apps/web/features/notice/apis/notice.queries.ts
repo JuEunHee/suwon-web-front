@@ -1,5 +1,4 @@
 import { queryOptions } from '@tanstack/react-query';
-
 import { getNoticeApi } from './notice.apis';
 
 export const noticeQueries = {

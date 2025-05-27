@@ -10,7 +10,8 @@ export type GetNoticeApi = {
 };
 
 export async function getNoticeApi() {
-  const { data: notices } = await apiClient.get<GetNoticeApi['Response']>(`/notices`);
+  const { data: notices } =
+    await apiClient.get<GetNoticeApi['Response']>('/notices');
 
-  return notices;
+  return notices.data;
 }

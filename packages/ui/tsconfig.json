@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "jsx": "react-jsx",
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -10,6 +11,10 @@
       ]
     },
   },
-  "include": ["src"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "@types"
+  ],
   "exclude": ["node_modules", "dist"]
 }

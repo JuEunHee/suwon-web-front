@@ -1,1 +1,1 @@
-export * from './notice.models';
+export * from "./notice.models";

@@ -1,16 +1,33 @@
 {
   "name": "@suwon-web-front/ui",
+  "description": "ui for React and tailwindcss, Shadcn",
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    ".": {
+      "import": {
+        "types": "./dist/modern/index.d.mts",
+        "default": "./dist/modern/index.mjs"
+      },
+      "require": {
+        "types": "./dist/modern/index.d.ts",
+        "default": "./dist/modern/index.js"
+      }
+    },
+    "./package.json": "./package.json"
   },
+  "types": "dist/legacy/index.d.ts",
+  "main": "dist/legacy/index.js",
+  "module": "dist/legacy/index.mjs",
   "scripts": {
     "build": "tsup",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "ui": "pnpm dlx shadcn@latest",
+    "prettier": "prettier --write './src/**/*.{ts,tsx,js,jsx}'"
+    
   },
   "devDependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -30,7 +47,11 @@
     "vitest": "^3.1.4"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.11",
+    "lucide-react": "^0.511.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.7",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

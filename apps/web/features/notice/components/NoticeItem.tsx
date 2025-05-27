@@ -1,13 +1,18 @@
 'use client';
 
+import {
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@suwon-web-front/ui';
 import type { NoticeModel } from '../models';
 
 const NoticeItem = ({ noticeItem }: { noticeItem: NoticeModel }) => {
   return (
-    <li className="flex flex-col gap-2">
-      <h2 className="text-lg font-bold">{noticeItem.title}</h2>
-      <p className="text-sm text-gray-500">{noticeItem.content}</p>
-    </li>
+    <AccordionItem value="item-1">
+      <AccordionTrigger>{noticeItem.title}</AccordionTrigger>
+      <AccordionContent>{noticeItem.content}</AccordionContent>
+    </AccordionItem>
   );
 };
 

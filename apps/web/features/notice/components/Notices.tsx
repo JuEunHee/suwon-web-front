@@ -1,9 +1,10 @@
 'use client';
 
-import { noticeQueries } from '@/features/notice/apis'; // noticeQueries 가져오기
+import { Accordion } from '@suwon-web-front/ui';
 import { useQuery } from '@tanstack/react-query';
-import type { NoticeModel } from '../models';
 import NoticeItem from './NoticeItem';
+import type { NoticeModel } from '../models';
+import { noticeQueries } from '@/features/notice/apis'; // noticeQueries 가져오기
 
 export default function Notices() {
   const { data: notices } = useQuery(noticeQueries.list()); // noticeQueries 사용
@@ -13,10 +14,16 @@ export default function Notices() {
   }
 
   return (
-    <ul>
-      {notices.map((notice: NoticeModel) => (
-        <NoticeItem noticeItem={notice} key={notice.id} />
+    <Accordion
+      type="single"
+      collapsible
+    >
+      {(notices as NoticeModel[]).map((notice: NoticeModel) => (
+        <NoticeItem
+          noticeItem={notice}
+          key={notice.id}
+        />
       ))}
-    </ul>
+    </Accordion>
   );
 }

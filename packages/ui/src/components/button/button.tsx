@@ -1,11 +1,10 @@
 'use client';
 
-import { cn } from '@/lib';
 import { Slot } from '@radix-ui/react-slot';
 import * as React from 'react';
 import { type VariantProps } from 'tailwind-variants';
-
 import { buttonVariants } from './button.variants';
+import { cn } from '../../lib/utils';
 
 type ElementType = HTMLButtonElement;
 type ElementProps = React.ButtonHTMLAttributes<ElementType>;

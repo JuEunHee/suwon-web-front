@@ -1,4 +1,4 @@
-import { Button } from '@suwon-web-front/ui/button';
+import { Button } from '@suwon-web-front/ui';
 import Notices from '@/features/notice/components/Notices';
 
 export default function Home() {
