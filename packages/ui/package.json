@@ -33,6 +33,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@suwon-web-front/eslint-config": "workspace:^",
     "@suwon-web-front/typescript-config": "workspace:*",
+    "@suwon-web-front/ui-tailwind": "workspace:*",
     "@testing-library/react": "^16.3.0",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.15.3",

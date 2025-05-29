@@ -8,6 +8,12 @@ importers:
 
   .:
     devDependencies:
+      '@suwon-web-front/eslint-config':
+        specifier: workspace:*
+        version: link:packages/eslint-config
+      '@suwon-web-front/typescript-config':
+        specifier: workspace:*
+        version: link:packages/typescript-config
       eslint-import-resolver-typescript:
         specifier: ^4.3.5
         version: 4.3.5(eslint-plugin-import@2.31.0)(eslint@9.27.0)
@@ -35,9 +41,6 @@ importers:
 
   apps/web:
     dependencies:
-      '@suwon-web-front/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       '@tanstack/react-query':
         specifier: ^5.76.2
         version: 5.76.2(react@19.1.0)
@@ -63,6 +66,12 @@ importers:
       '@suwon-web-front/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@suwon-web-front/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@suwon-web-front/ui-tailwind':
+        specifier: workspace:*
+        version: link:../../packages/tailwind
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.3
@@ -133,6 +142,19 @@ importers:
         specifier: ^8.32.0
         version: 8.32.0(eslint@9.27.0)(typescript@5.8.2)
 
+  packages/tailwind:
+    dependencies:
+      '@fxts/core':
+        specifier: ^1.6.0
+        version: 1.11.0
+      tailwindcss:
+        specifier: '>=3.0.0'
+        version: 4.1.7
+    devDependencies:
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.0(postcss@8.5.3)(typescript@5.8.2)(yaml@2.8.0)
+
   packages/typescript-config: {}
 
   packages/ui:
@@ -165,6 +187,9 @@ importers:
       '@suwon-web-front/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      '@suwon-web-front/ui-tailwind':
+        specifier: workspace:*
+        version: link:../tailwind
       '@testing-library/react':
         specifier: ^16.3.0
         version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.1.1(@types/react@19.1.0))(@types/react@19.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -423,6 +448,9 @@ packages:
   '@eslint/plugin-kit@0.3.1':
     resolution: {integrity: sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fxts/core@1.11.0':
+    resolution: {integrity: sha512-nRJD/bris+Wc+7sX4mmvzIw9M44KnVZ3qpje4X1poGN/mSJKOGieWIju3/kaTJDrQKheQ0Asmvq+QmGyT6UbaQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3611,6 +3639,10 @@ snapshots:
     dependencies:
       '@eslint/core': 0.14.0
       levn: 0.4.1
+
+  '@fxts/core@1.11.0':
+    dependencies:
+      tslib: 2.8.1
 
   '@humanfs/core@0.19.1': {}
 

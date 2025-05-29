@@ -1,0 +1,54 @@
+{
+  "license": "PROPRIETARY",
+  "name": "@suwon-web-front/ui-tailwind",
+  "description": "Root Tailwind Config",
+  "version": "0.2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "package.json"
+  ],
+  "types": "dist/legacy/index.d.ts",
+  "main": "dist/legacy/index.js",
+  "module": "dist/legacy/index.mjs",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/modern/index.d.mts",
+        "default": "./dist/modern/index.mjs"
+      },
+      "require": {
+        "types": "./dist/modern/index.d.ts",
+        "default": "./dist/modern/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -rf .next && rm -rf dist",
+    "type:check": "tsc --noEmit --project tsconfig.build.json",
+    "prebuild": "rimraf dist/*",
+    "build": "tsup",
+    "build:dev": "tsup",
+    "prettier": "prettier --write './src/**/*.{ts,tsx,js,jsx}'",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
+    "watch": "tsup --watch",
+    "clear": "rm -rf dist",
+    "test": "vitest --run"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  },
+  "dependencies": {
+    "@fxts/core": "^1.6.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}
