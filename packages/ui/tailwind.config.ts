@@ -6,7 +6,7 @@ const config = {
    * @see https://tailwindcss.com/docs/content-configuration
    */
   content: [
-    './node_modules/@seolhun/ui/dist/**/*.{ts,tsx,js,jsx}',
+    './node_modules/@suwon-web-front/ui/dist/**/*.{ts,tsx,js,jsx}',
     './src/**/*.{ts,tsx,js,jsx}',
   ],
 

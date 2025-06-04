@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] });
 import type { ReactNode } from 'react';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import './globals.css';
+import '@/assets/globals.scss';
 
 export const metadata: Metadata = {
   title: '수원시 통합관리 플랫폼',

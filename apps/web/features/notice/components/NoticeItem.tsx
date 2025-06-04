@@ -9,7 +9,7 @@ import type { NoticeModel } from '../models';
 
 const NoticeItem = ({ noticeItem }: { noticeItem: NoticeModel }) => {
   return (
-    <AccordionItem value="item-1">
+    <AccordionItem value={`item-${noticeItem.id}`}>
       <AccordionTrigger>{noticeItem.title}</AccordionTrigger>
       <AccordionContent>{noticeItem.content}</AccordionContent>
     </AccordionItem>

@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@import '@suwon-web-front/ui-tailwind';
 
 :root {
   --background: #ffffff;

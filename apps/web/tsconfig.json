@@ -17,7 +17,7 @@
     "next-env.d.ts",
     "next.config.js",
     ".next/types/**/*.ts"
-  ],
+, "features/redux/createStore.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,0 +1,233 @@
+@import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*** * * * * * * * * *
+    *** Shadcn Start
+    *** * * * * * * * * * */
+    /* System Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 15%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+
+    /* Intent Colors */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 220 20% 90%;
+    --accent-foreground: 220 20% 30%;
+    --primary: 217 89% 61%;     /* Google Blue #4285F4 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 71% 53%;
+    --secondary-foreground: 210 40% 98%;
+    --tertiary: 0 0% 45%;
+    --tertiary-foreground: 0 0% 86%;
+    --informative: 199 95% 43%;
+    --informative-foreground: 199 95% 96%;
+    --positive: 142 76% 31%;
+    --positive-foreground: 142 76% 96%;
+    --cautionary: 25 99% 53%;
+    --cautionary-foreground: 25 99% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Chart */
+    --chart-1: 210 100% 60%;
+    --chart-2: 48 100% 60%;
+    --chart-3: 120 60% 60%;
+    --chart-4: 350 100% 60%;
+    --chart-5: 280 100% 60%;
+    --chart-6: 160 60% 60%;
+    --chart-7: 25 100% 60%;
+    --chart-8: 340 100% 60%;
+    --chart-9: 195 53% 60%;
+    --chart-10: 400 100% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Form */
+    --form-background: 0 0% 98%;
+    --form-foreground: 240 10% 5%;
+    --form-primary: 240 5% 95%;
+    --form-primary-foreground: 0 0% 98%;
+    --form-accent: 240 4.8% 95.9%;
+    --form-accent-foreground: 240 5.9% 10%;
+    --form-border: 220 13% 91%;
+    --form-ring: 220 10% 28%;
+
+    /* Common Colors */
+    --color-white: 0 0% 100%;
+    --color-black: 0 0% 0%;
+
+    /** * * * * * * * * * *
+    * Shadcn End
+    *** * * * * * * * */
+
+    /* Font Size Variables */
+    --typography-font-size-heading-1: 2rem;
+    --typography-font-size-heading-2: 1.75rem;
+    --typography-font-size-heading-3: 1.5rem;
+    --typography-font-size-heading-4: 1.25rem;
+    --typography-font-size-heading-5: 1.125rem;
+    --typography-font-size-heading-6: 1rem;
+    --typography-font-size-title-3: 1.25rem;
+    --typography-font-size-title-2: 1.125rem;
+    --typography-font-size-title-1: 1rem;
+    --typography-font-size-body-2: 1rem;
+    --typography-font-size-body-1: 0.875rem;
+    --typography-font-size-label: 0.875rem;
+    --typography-font-size-tooltip: 0.875rem;
+    --typography-font-size-caption: 0.75rem;
+
+    /* Line Height Variables */
+    --typography-line-height-heading-1: 2.5rem;
+    --typography-line-height-heading-2: 2rem;
+    --typography-line-height-heading-3: 1.75rem;
+    --typography-line-height-heading-4: 1.5rem;
+    --typography-line-height-heading-5: 1.25rem;
+    --typography-line-height-heading-6: 1.125rem;
+    --typography-line-height-title-3: 1.5rem;
+    --typography-line-height-title-2: 1.25rem;
+    --typography-line-height-title-1: 1.125rem;
+    --typography-line-height-body-2: 1.5rem;
+    --typography-line-height-body-1: 1.375rem;
+    --typography-line-height-label: 1.375rem;
+    --typography-line-height-tooltip: 1.375rem;
+    --typography-line-height-caption: 1.125rem;
+
+    /* Font Weight Variables */
+    --typography-font-weight-medium: 500;
+    --typography-font-weight-semibold: 600;
+    --typography-font-weight-bold: 700;
+    --typography-letter-spacing-default: 0em;
+
+    /* Social Media Colors - Updated with pastel variants */
+    --color-discord: 224 100% 49%;
+    --color-facebook: 224 100% 49%;
+    --color-github: 0 0% 20%;
+    --color-instagram: 340 80% 55%;
+    --color-linkedin: 201 100% 35%;
+    --color-telegram: 200 100% 40%;
+    --color-threads: 0 0% 4%;
+    --color-tiktok: 280 100% 49%;
+    --color-x: 0 0% 0%;
+    --color-youtube: 348 100% 49%;
+
+    /** * * * * * * * * *
+    * Layout Variables Start
+    *** * * * * * * * */
+    --layout-sidebar-expanded: 240px;
+    --layout-sidebar-collapsed: 64px;
+    --layout-sidebar-hidden: 0px;
+    --sidebar-icon-size-sm: 16px;
+    --sidebar-icon-size-md: 20px;
+    --sidebar-icon-size-lg: 24px;
+    --sidebar-text-size-sm: 0.875rem;
+    --sidebar-text-size-md: 1rem;
+    --sidebar-text-size-lg: 1.125rem;
+    /** * * * * * * * * * *
+    *** Layout Variables End
+    *** * * * * * * * */
+  }
+}
+
+@layer base {
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  height: 100%;
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: 'Pretendard', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Cross-browser
+::-webkit-input-placeholder {
+  line-height: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+@keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-animation: autofill 0s forwards;
+  animation: autofill 0s forwards;
+  filter: none;
+}
+
+input {
+  filter: none;
+  -moz-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+}
